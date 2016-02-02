@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head><title>FUploader</title></head>
+  <head>
+    <title>FUploader</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
   <body>
     <form method='post' action='' enctype='multipart/form-data'>
-      <input type='file' name='uploadedfile'>
+      <input type='file' name='uploadedfile' multiple="true">
       <input type='submit' value='Upload'>
     </form>
   </body>

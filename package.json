@@ -1,7 +1,8 @@
 {
   "name": "fuploader",
   "version": "1.0.0",
-  "description": "",
+  "repository": "https://github.com/bencord0/fuploader",
+  "description": "A simple http file upload service",
   "main": "index.js",
   "author": "",
   "scripts": {

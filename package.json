@@ -6,11 +6,12 @@
   "main": "index.js",
   "author": "",
   "scripts": {
-      "start": "node index.js"
+    "start": "node index.js"
   },
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
+    "helmet": "^1.1.0",
     "multer": "^1.1.0"
   }
 }

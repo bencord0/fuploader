@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var express = require('express');
+var helmet = require('helmet');
 var multer = require('multer');
 var upload = multer({dest: 'uploads/'});
 var app = express();
@@ -27,6 +28,7 @@ function handle_file(file) {
 }
 
 
+app.use(helmet());
 app.use(express.static('static'));
 app.post('/', function(req, res, next) {
 

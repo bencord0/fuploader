@@ -36,9 +36,7 @@ app.post('/', function(req, res) {
     if (log_error(err)) return;
 
     // everything is fine
-    for (file in req.files) {
-      handle_file(req.files[file])
-    }
+    req.files.map(handle_file);
 
     res.redirect('/');
   });

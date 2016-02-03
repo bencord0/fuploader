@@ -8,9 +8,8 @@ var app = express();
 function log_error(err) {
     if (err != null) {
         console.log(err);
-        return true;
     }
-    return false;
+    return err
 };
 
 
@@ -29,11 +28,11 @@ function handle_file(file) {
 
 
 app.use(express.static('static'));
-app.post('/', function(req, res) {
+app.post('/', function(req, res, next) {
 
   uploader = upload.array('uploadedfile');
   uploader(req, res, function (err) {
-    if (log_error(err)) return;
+    if (log_error(err)) return next(err);
 
     // everything is fine
     req.files.map(handle_file);

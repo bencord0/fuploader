@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "repository": "https://github.com/bencord0/fuploader",
   "description": "A simple http file upload service",
+  "bin": "main.js",
   "main": "index.js",
   "author": "",
   "scripts": {
-    "start": "node index.js"
+    "start": "NODE_ENV=production node main.js",
+    "dev": "node main.js"
   },
   "license": "ISC",
   "dependencies": {

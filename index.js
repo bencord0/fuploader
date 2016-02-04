@@ -29,7 +29,7 @@ function handle_file(file) {
 
 
 app.use(helmet());
-app.use(express.static('static'));
+app.use(express.static(path.join(__dirname, 'static')));
 app.post('/', function(req, res, next) {
 
   uploader = upload.array('uploadedfile');
@@ -44,7 +44,4 @@ app.post('/', function(req, res, next) {
 
 });
 
-var port = process.env.PORT || 8000;
-app.listen(port, function() {
-    console.log("Listening on %d", port);
-});
+module.exports = app;
